@@ -1,0 +1,32 @@
+@import '/styles/colors.module.scss';
+@import '/styles/text.module.scss';
+
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+html,
+body {
+  @include color();
+  @include textStyle();
+  padding: 0;
+  margin: 0;
+}
+
+.global_container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}

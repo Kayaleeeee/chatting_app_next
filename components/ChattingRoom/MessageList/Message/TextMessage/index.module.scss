@@ -1,0 +1,54 @@
+@mixin wrapper {
+  width: 100%;
+  display: inline-flex;
+  align-items: flex-end;
+}
+
+@mixin messageWrapper {
+  max-width: 70%;
+  font: var(--textStyle2);
+
+  display: flex;
+  min-height: 2.563rem;
+
+  padding: 0.75rem;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+
+  box-shadow: 0 2px 4px 0 var(--black-10);
+  margin-bottom: 0.625rem;
+  word-break: break-all;
+}
+
+.partnerMessageWrapper {
+  @include wrapper();
+  justify-content: flex-start;
+
+  .messageWrapper {
+    @include messageWrapper();
+    background-color: #fff;
+  }
+}
+
+.myMessageWrapper {
+  @include wrapper();
+  justify-content: flex-end;
+
+  .messageWrapper {
+    @include messageWrapper();
+    color: #fff;
+    background: var(--maincolor);
+  }
+}
+
+.createdAtWrapper {
+  margin: 0 0.25rem 0.625rem 0.25rem;
+  display: flex;
+
+  .createdAt {
+    opacity: 0.4;
+    font-size: 0.75rem;
+    color: var(--charcoal-grey-two);
+  }
+}

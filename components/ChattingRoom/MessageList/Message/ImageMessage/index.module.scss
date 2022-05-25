@@ -1,0 +1,52 @@
+.wrapper {
+  display: inline-flex;
+  align-items: flex-end;
+  margin-bottom: 0.625rem;
+  position: relative;
+}
+
+.closeButton {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--black);
+  outline: none;
+  border: none;
+  border-radius: 100%;
+
+  opacity: 0.8;
+
+  position: absolute;
+  top: 5.125rem;
+  left: 4.75rem;
+  z-index: 1;
+}
+
+.closeIconWrapper {
+  position: relative;
+  width: 1rem;
+  height: 1rem;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 12.5rem;
+  height: 12.5rem;
+
+  border-radius: 12px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.createdAtWrapper {
+  margin-left: 0.25rem;
+  display: flex;
+
+  .createdAt {
+    opacity: 0.4;
+    font-size: 0.75rem;
+    color: var(--charcoal-grey-two);
+  }
+}

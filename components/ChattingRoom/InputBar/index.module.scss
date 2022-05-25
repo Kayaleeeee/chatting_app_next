@@ -1,0 +1,46 @@
+.wrapper {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.textInput {
+  flex: 1;
+  padding: 1rem;
+  height: 3.125rem;
+  background-color: #fff;
+  border-radius: 25px;
+  box-shadow: 0px 2px 4px 0 var(--black-10);
+  border: none;
+  outline: none;
+
+  &::placeholder {
+    color: var(--battleship-grey);
+    letter-spacing: -0.12px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    opacity: 0.6;
+  }
+}
+
+.sendButton {
+  width: 3.125rem;
+  height: 3.125rem;
+  margin-left: 0.75rem;
+
+  background-color: var(--maincolor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+
+  .sendIconWrapper {
+    position: relative;
+    width: 1.625rem;
+    height: 1.125rem;
+  }
+}
