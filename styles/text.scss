@@ -1,0 +1,50 @@
+@mixin textStyle {
+  --textStyle3: {
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: -0.2px;
+  }
+
+  --textStyle2: {
+    font-size: 14px;
+    font-weight: semibold;
+    letter-spacing: -0.1px;
+  }
+
+  --textStyle: {
+    font-size: 16px;
+    font-weight: semibold;
+    letter-spacing: -0.1px;
+    color: red;
+  }
+}
+
+@mixin Text-Style-3 {
+  font-family: AppleSDGothicNeo-Bold;
+  font-size: 1rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+}
+
+@mixin Text-Style-2 {
+  font-family: AppleSDGothicNeo-SemiBold;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.1px;
+}
+
+@mixin Text-Style {
+  font-family: AppleSDGothicNeo-SemiBold;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.1px;
+}

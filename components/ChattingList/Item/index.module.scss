@@ -1,4 +1,4 @@
-@import 'styles/text.module.scss';
+@import 'styles/text.scss';
 
 .wrapper {
   width: 100%;
@@ -27,13 +27,21 @@
   padding: 0 0.813rem 0 0.938rem;
 
   .sender {
-    // @include TextStyle3();
+    @include Text-Style-3();
     color: var(--charcoal-grey);
     padding-bottom: 0.188rem;
   }
 
   .message {
-    // @include TextStyle2();
+    font-family: AppleSDGothicNeo-Medium;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: anywhere;
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+
     color: var(--cool-grey);
     font-size: 0.813rem;
   }
@@ -47,12 +55,14 @@
   justify-content: space-between;
 
   .createdAt {
+    font-family: AppleSDGothicNeo-Medium;
     font-size: 0.625rem;
     color: var(--charcoal-grey-two);
     opacity: 0.4;
   }
 
   .messageCount {
+    font-family: AppleSDGothicNeo-Bold;
     display: flex;
     align-items: center;
     justify-content: center;

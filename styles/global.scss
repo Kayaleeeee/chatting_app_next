@@ -1,20 +1,53 @@
-@import '/styles/colors.module.scss';
-@import '/styles/text.module.scss';
+@import '/styles/colors.scss';
+
+@font-face {
+  font-family: AppleSDGothicNeo-Bold;
+  src: url('/fonts/AppleSDGothicNeoB.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: AppleSDGothicNeo-SemiBold;
+  src: url('/fonts/AppleSDGothicNeoSB.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: AppleSDGothicNeo-Medium;
+  src: url('/fonts/AppleSDGothicNeoM.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: AppleSDGothicNeo;
+  src: url('/fonts/AppleSDGothicNeoR.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+}
 
 * {
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  font-family: AppleSDGothicNeo;
 }
 
 html,
 body {
   @include color();
-  @include textStyle();
   padding: 0;
   margin: 0;
+  overflow: hidden;
+  height: 100%;
 }
 
 .global_container {
+  position: relative;
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
