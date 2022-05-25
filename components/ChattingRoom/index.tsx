@@ -1,4 +1,5 @@
 import styles from 'components/ChattingRoom/index.module.scss';
+import { useScreenSize } from 'hooks/useScreenSize';
 import {
   ChattingDetailType,
   ChattingMessageContentType,
@@ -12,8 +13,17 @@ type Props = {
 };
 
 const ChattingRoom = ({ chattingDetail, handlePostMessage }: Props) => {
+  const { screenSize } = useScreenSize();
+
   return (
-    <div className={styles.wrapper}>
+    <div
+      className={styles.wrapper}
+      style={
+        screenSize.height
+          ? { height: `calc(${screenSize.height}px - 2.75rem)` }
+          : {}
+      }
+    >
       <ChattingMessageList messages={chattingDetail.messages} />
       <span className={styles.inputBarWrapper}>
         <InputBar handlePostMessage={handlePostMessage} />

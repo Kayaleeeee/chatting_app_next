@@ -1,6 +1,12 @@
 .wrapper {
   display: flex;
   flex-direction: column;
+
+  &:first-child {
+    .dateWrapper {
+      display: none;
+    }
+  }
 }
 
 .dateWrapper {
@@ -9,18 +15,18 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 0.625rem;
-}
 
-.date {
-  color: #363a42;
-  opacity: 0.4;
-  font-size: 0.75rem;
-}
+  .date {
+    color: var(--charcoal-grey-two);
+    opacity: 0.4;
+    font-size: 0.75rem;
+  }
 
-.divider {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  height: 1px;
-  background-color: var(--pale-lilac);
+  .divider {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    height: 1px;
+    background-color: var(--pale-lilac);
+  }
 }

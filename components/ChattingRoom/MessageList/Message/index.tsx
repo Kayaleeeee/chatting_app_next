@@ -1,6 +1,7 @@
 import { ChattingMessageType } from 'store/chatting/type';
-import ImageMessage from './ImageMessage';
-import TextMessage from './TextMessage';
+import { MY_UUID } from 'utils/constants/uuid';
+import MyMessage from './MyMessage';
+import PartnerMessage from './PartnerMessage';
 
 type Props = {
   message: ChattingMessageType;
@@ -8,12 +9,11 @@ type Props = {
 };
 
 const Message = ({ message, createdAt }: Props) => {
-  switch (message.content.type) {
-    case 'text':
-      return <TextMessage message={message} createdAt={createdAt} />;
-    case 'image':
-      return <ImageMessage imageUrl={message.content.value} />;
-  }
+  return message.senderUuid === MY_UUID ? (
+    <MyMessage content={message.content} createdAt={createdAt} />
+  ) : (
+    <PartnerMessage content={message.content} createdAt={createdAt} />
+  );
 };
 
 export default Message;

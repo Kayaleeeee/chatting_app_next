@@ -16,11 +16,12 @@ const MessageGroupByTime = ({ messageGroupByTime }: Props) => {
         const messageListBySender = messageGroupBySender[senderUuid];
 
         return (
-          <div className={styles.messageListWrapper}>
+          <div key={senderUuid} className={styles.messageListWrapper}>
             <div className={styles.messageListWrapper}>
               {messageListBySender.map((message, index) => {
                 return (
                   <Message
+                    key={message.content.contentId}
                     message={message}
                     createdAt={
                       index === messageListBySender.length - 1

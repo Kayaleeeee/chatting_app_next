@@ -1,4 +1,4 @@
-@import '/styles/scroll.module.scss';
+@import '/styles/scroll.scss';
 
 .messageListWrapper {
   @include hide-scrollbar();
@@ -6,4 +6,5 @@
   flex-direction: column;
   height: calc(100% - 70px);
   overflow-y: scroll;
+  padding-top: 1rem;
 }

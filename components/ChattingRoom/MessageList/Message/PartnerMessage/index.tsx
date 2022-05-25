@@ -1,6 +1,7 @@
-import styles from 'components/ChattingRoom/MessageList/Message/TextMessage/index.module.scss';
+import styles from 'components/ChattingRoom/MessageList/Message/index.module.scss';
 import { ChattingMessageContentType } from 'store/chatting/type';
 import { formatDateToTime } from 'utils/date';
+import ImageMessage from '../ImageMessage';
 
 type Props = {
   content: ChattingMessageContentType;
@@ -8,9 +9,17 @@ type Props = {
 };
 
 const PartnerMessage = ({ content, createdAt }: Props) => {
+  const renderMessgaeByType = () => {
+    switch (content.type) {
+      case 'image':
+        return <ImageMessage imageUrl={content.value} />;
+      case 'text':
+        return <div className={styles.messageWrapper}>{content.value}</div>;
+    }
+  };
   return (
     <div className={styles.partnerMessageWrapper}>
-      <div className={styles.messageWrapper}>{content.value}</div>
+      {renderMessgaeByType()}
       {!!createdAt && (
         <div className={styles.createdAtWrapper}>
           <p className={styles.createdAt}>

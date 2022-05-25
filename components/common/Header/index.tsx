@@ -3,7 +3,12 @@ import { HTMLAttributes } from 'react';
 import { FC } from 'react';
 
 const Header: FC<HTMLAttributes<HTMLHeadElement>> = ({ children }) => {
-  return <header className={styles.wrapper}>{children}</header>;
+  return (
+    <>
+      <header className={styles.wrapper}>{children}</header>
+      <div className={styles.heightholder} />
+    </>
+  );
 };
 
 export default Header;
