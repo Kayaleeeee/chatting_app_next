@@ -1,1 +1,1 @@
-
+Front only chatting application
