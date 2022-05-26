@@ -1,3 +1,5 @@
+@import 'styles/animation.scss';
+
 .wrapper {
   width: 100%;
   display: flex;
@@ -6,6 +8,7 @@
 }
 
 .messageListWrapper {
+  @include slide-in(0.5s);
   display: flex;
   flex-direction: column;
 }

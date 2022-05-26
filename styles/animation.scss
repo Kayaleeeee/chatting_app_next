@@ -1,0 +1,43 @@
+@mixin slide-in($duration) {
+  animation: slide-in $duration forwards;
+  -webkit-animation: slide-in $duration forwards;
+  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+}
+
+@mixin slide-out($duration) {
+  animation: slide-out $duration forwards;
+  -webkit-animation: slide-out $duration forwards;
+  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+}
+
+@keyframes slide-in {
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes slide-in {
+  100% {
+    -webkit-transform: translateX(0%);
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@-webkit-keyframes slide-out {
+  0% {
+    -webkit-transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+  }
+}
