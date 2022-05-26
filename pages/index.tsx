@@ -7,7 +7,7 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     router.push('/list');
-  }, []);
+  }, [router]);
 
   return <div></div>;
 };

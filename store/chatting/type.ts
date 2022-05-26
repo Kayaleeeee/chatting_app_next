@@ -4,7 +4,7 @@ export type ChattingListItemType = {
   sender: string;
   lastMessage: string;
   unreadMessageCount: number;
-  createdAt: string;
+  createdAt: Date;
 };
 
 export type ChattingReducerState = {

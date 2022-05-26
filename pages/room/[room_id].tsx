@@ -27,7 +27,7 @@ const ChattingRoomPage: NextPage<RootState> = ({
 
   useEffect(() => {
     dispatch(setChattingAsRead({ roomId: detail.user.uuid }));
-  }, [dispatch]);
+  }, [dispatch, detail.user.uuid]);
 
   return (
     <>
