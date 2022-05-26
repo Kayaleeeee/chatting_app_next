@@ -26,6 +26,7 @@ const ImageList = ({ imageList, isOpend, handlePostMessage }: Props) => {
       {imageList.map((imageSrc, index) => {
         return (
           <div
+            data-testid='image-item'
             className={styles.imageWrapper}
             key={`${imageSrc}_${index}`}
             onClick={() => handleClickImage(imageSrc)}

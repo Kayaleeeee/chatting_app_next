@@ -7,17 +7,3 @@ export const fetchChattingDetail = (room_id: string) => {
     data: room_id,
   });
 };
-
-export const uploadImage = (file: File) => {
-  const formData = new FormData();
-  formData.append('file', file);
-
-  return request({
-    url: `/uploadFile`,
-    method: 'POST',
-    data: formData,
-    headers: {
-      'Content-Type': 'multipart/form-data',
-    },
-  });
-};

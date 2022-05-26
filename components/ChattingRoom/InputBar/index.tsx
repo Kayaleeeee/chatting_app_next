@@ -35,13 +35,18 @@ const InputBar = ({ handlePostMessage }: Props) => {
   return (
     <div className={styles.wrapper}>
       <input
+        data-testid='message-input'
         className={styles.textInput}
         value={text}
         onChange={changeText}
         placeholder='메세지를 입력하세요..'
         onKeyPress={handleKeyPress}
       />
-      <button className={styles.sendButton} onClick={postMessage}>
+      <button
+        className={styles.sendButton}
+        data-testid='message-send-button'
+        onClick={postMessage}
+      >
         <div className={styles.sendIconWrapper}>
           <Image
             src={'/images/icon/img-send.svg'}

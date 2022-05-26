@@ -35,7 +35,6 @@ const ChattingRoomPage: NextPage<RootState> = ({
         sender={detail.user.name}
         onClickImageUploadIcon={onClickImageUploadIcon}
       />
-
       <ImageList
         imageList={ImageListData}
         isOpend={isOpenedImageList}
